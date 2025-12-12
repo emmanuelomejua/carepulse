@@ -1,8 +1,12 @@
 import React from 'react'
+import Logo from '../components/Logo';
 
 const Auth = () => {
   return (
-    <div>Auth</div>
+    <main className='flex flex-col justify-between my-auto'>
+        <Logo/>
+        Auth
+    </main>
   )
 }
 

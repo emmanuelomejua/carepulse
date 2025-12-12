@@ -6,11 +6,11 @@ import Auth from '../pages/Auth';
 
 function AppLayout (){
     return(
-        <main className="flex w-full min-h-screen">
-            <div className="flex mx-auto max-w-7xl w-full bg-white">
-                <Outlet/>
-            </div>
-        </main>
+    <main className="w-full min-h-screen ">
+      <div className="max-w-7xl w-full mx-auto h-screen">
+        <Outlet />
+      </div>
+    </main>
     )
 }
 

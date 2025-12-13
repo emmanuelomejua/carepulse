@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Navbar from '../components/Navbar';
 import AppointmentTable from '../sections/AppointmentTable';
 import OverView from '../sections/OverView';

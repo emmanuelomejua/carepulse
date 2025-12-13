@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Typography from '../components/ui/typography/Typography';
 import Widget from '../components/Widget';
 
@@ -12,9 +12,9 @@ const OverView = () => {
         </div>
 
         <div className="flex flex-wrap gap-1.5 justify-between">
-          <Widget className='' tag={94} desc='Total number of  scheduled appointments'/>
-          <Widget className='' tag={32} desc='Total number of pending appointments'/>
-          <Widget className='' tag={56} desc='Total number of cancelled  appointments'/>
+          <Widget className='' icon='/icons/calendar-check.svg' tag={94} desc='Total number of  scheduled appointments'/>
+          <Widget className='' icon='/icons/hourglass.svg' tag={32} desc='Total number of pending appointments'/>
+          <Widget className='' icon='/icons/alert-triangle.svg' tag={56} desc='Total number of cancelled  appointments'/>
         </div>
     </div>
   )

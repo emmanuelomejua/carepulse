@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Typography from '../components/ui/typography/Typography';
 import { TextField } from '../components/ui/inputs/TextField';
 import Button from '../components/ui/buttons/Button';

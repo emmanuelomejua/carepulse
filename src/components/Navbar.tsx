@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Logo from './Logo';
 import Typography from './ui/typography/Typography';
 

@@ -23,6 +23,7 @@ const AuthForm = () => {
       icon={<img src='/icons/username.svg' alt='' className='w-4.5 h-4.5'/>}
       label='Full name' 
       placeholder='John Doe' 
+      required
       className='border border-[#363A3D] text-[#FFFFFF] p-3 bg-[#1A1D21] focus-within:outline-2 focus-within:outline-[#84DCF53D]
       focus-within:text-[#B6F09C] placeholder:text-[#76828D] focus-within:border-2 focus-within:border-[#B6F09C]' />
 
@@ -30,6 +31,7 @@ const AuthForm = () => {
       icon={<img src='/icons/email.svg' alt='' className='w-4.5 h-4.5'/>}
       label='Email address' 
       placeholder='johndoe@gmail.com' 
+      required
       className='border border-[#363A3D] text-[#FFFFFF] p-3 bg-[#1A1D21] focus-within:outline-2 focus-within:outline-[#84DCF53D]
       focus-within:text-[#B6F09C] placeholder:text-[#76828D] focus-within:border-2 focus-within:border-[#B6F09C]'/>
 
@@ -37,13 +39,14 @@ const AuthForm = () => {
       icon={<img src='/icons/phone.svg' alt='' className='w-4.5 h-4.5'/>}
       label='Phone number' 
       placeholder='+234 901 334 7728' type='number' 
+      required
       className='border border-[#363A3D] text-[#FFFFFF] p-3 bg-[#1A1D21] focus-within:outline-2 focus-within:outline-[#84DCF53D]
       focus-within:text-[#B6F09C] placeholder:text-[#76828D] focus-within:border-2 focus-within:border-[#B6F09C]'/>
 
      <Button onClick={handleSubmit} className='bg-[#24AE7C] text-[#FFFFFF] py-3 px-5'>Get Started</Button>
     </section>
 
-    <OtpModal open={open} handleClose={() => setOpen(false)}/>
+    <OtpModal open={open} setOpen={setOpen} handleClose={() => setOpen(false)}/>
 
     </>
   )

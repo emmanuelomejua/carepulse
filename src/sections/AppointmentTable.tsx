@@ -10,8 +10,6 @@ import CancelAppointmentModal from "./CancelAppointmentModal";
 import user from '../assets/user.png'
 
 
-
-
 const AppointmentTable = () => {
 
     const [openScheduleModal, setOpenScheduleModal] = useState<boolean>(false);

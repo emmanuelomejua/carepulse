@@ -8,6 +8,7 @@ import CancelAppointmentModal from "./CancelAppointmentModal";
 
 //ICONS
 import user from '../assets/user.png'
+import { Check, Hourglass, X } from "lucide-react";
 
 
 const AppointmentTable = () => {
@@ -53,8 +54,11 @@ const AppointmentTable = () => {
             header: 'Status',
             accessor: 'status',
             renderRow: (val: any) => (
-                <div className={`flex items-center gap-1 rounded-2xl py-0.5 pl-1.5 pr-2 ${val.status === 'scheduled' ? 'text-[#24AE7C] bg-[#0D2A1F]': val.status === 'pending' ? 'text-[#79B5EC] bg-[#152432]': 'text-[#F37877] bg-[#3E1716]'}`}>
-                    <img src="" alt="" className="" />
+                <div className={`flex items-center gap-1 rounded-2xl py-0.5 pl-1.5 pr-2 w-fit ${val.status === 'scheduled' ? 'text-[#24AE7C] bg-[#0D2A1F]': val.status === 'pending' ? 'text-[#79B5EC] bg-[#152432]': 'text-[#F37877] bg-[#3E1716]'}`}>
+                    {val.status === 'scheduled' ? 
+                    <Check  style={{ height: '14px', width: '14px', color: '#24AE7C' }}/> : val.status === 'pending' ? <Hourglass style={{ height: '14px', width: '14px', color: '#79B5EC' }} />: 
+                    <X style={{ height: '14px', width: '14px', color: '#F37877' }}/>
+                    }
                     <Typography className="capitalize text-[12px] leading-4.5 tracking-[0%] font-semibold" variant="span">{val.status}</Typography>
                 </div>
             )

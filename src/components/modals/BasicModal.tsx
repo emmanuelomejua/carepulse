@@ -1,4 +1,4 @@
-import React, { type FC, type ReactNode } from 'react';
+import { type FC, type ReactNode } from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 

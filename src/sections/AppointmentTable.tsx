@@ -1,28 +1,30 @@
+import { useState } from "react";
 import BasicTable from "../components/ui/tables/BasicTable";
 import Typography from "../components/ui/typography/Typography";
 import { patientData } from "../data/data";
+import ScheduleModal from "./ScheduleModal";
+import CancelAppointmentModal from "./CancelAppointmentModal";
 
 
 //ICONS
 import user from '../assets/user.png'
-import { useState } from "react";
 
 
 
 
 const AppointmentTable = () => {
 
-    const [openModal, setOpenModal] = useState<"schedule" | "cancel" | null>(null);
-    const [selectedAppointment, setSelectedAppointment] = useState<any>(null);
+    const [openScheduleModal, setOpenScheduleModal] = useState<boolean>(false);
+    const [openCancelModal, setOpenCancelModal] = useState<boolean>(false);
 
     const handleSchedule = (row: any) => {
-        setSelectedAppointment(row);
-        setOpenModal("schedule");
+        setOpenScheduleModal(true);
+        console.log(row);
     };
 
     const handleCancel = (row: any) => {
-        setSelectedAppointment(row);
-        setOpenModal("cancel");
+        setOpenCancelModal(true);
+        console.log(row);
     };
 
     const columns = [
@@ -88,9 +90,22 @@ const AppointmentTable = () => {
     ]
 
   return (
-    <div className="h-119.5 mb-7.5">
-        <BasicTable columns={columns} data={patientData ?? []}/>
-    </div>
+    <>
+        <div className="h-119.5 mb-7.5">
+            <BasicTable columns={columns} data={patientData ?? []}/>
+        </div>
+
+        <ScheduleModal 
+            open={openScheduleModal} 
+            setOpenScheduleModal={setOpenScheduleModal} 
+            handleClose={() => setOpenScheduleModal(false)}/>
+
+
+        <CancelAppointmentModal 
+            open={openCancelModal} 
+            handleClose={() => setOpenCancelModal(false)} 
+            setCancelModal={setOpenCancelModal}/>
+    </>
   )
 }
 

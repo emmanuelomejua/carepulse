@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type FormEvent } from 'react'
 import Typography from '../components/ui/typography/Typography';
 import { TextField } from '../components/ui/inputs/TextField';
 import Button from '../components/ui/buttons/Button';
@@ -8,13 +8,14 @@ const AuthForm = () => {
 
   const [open, setOpen] = useState(false)
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setOpen(true)
   }
 
   return (
     <>
-    <section className='flex flex-col gap-8'>
+    <form className='flex flex-col gap-8' onSubmit={handleSubmit}>
      <Typography variant='h1' className='text-[#FFFFFF]'>Hi there, ....</Typography>
 
      <Typography variant='span' className='text-[#ABB8C4]'>Get Started with Appointments.</Typography>
@@ -43,8 +44,10 @@ const AuthForm = () => {
       className='border border-[#363A3D] text-[#FFFFFF] p-3 bg-[#1A1D21] focus-within:outline-2 focus-within:outline-[#84DCF53D]
       focus-within:text-[#B6F09C] placeholder:text-[#76828D] focus-within:border-2 focus-within:border-[#B6F09C]'/>
 
-     <Button onClick={handleSubmit} className='bg-[#24AE7C] text-[#FFFFFF] py-3 px-5'>Get Started</Button>
-    </section>
+     <Button 
+      type='submit'
+      className='bg-[#24AE7C] text-[#FFFFFF] py-3 px-5'>Get Started</Button>
+    </form>
 
     <OtpModal open={open} setOpen={setOpen} handleClose={() => setOpen(false)}/>
 

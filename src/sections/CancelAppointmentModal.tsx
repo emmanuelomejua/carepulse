@@ -4,6 +4,9 @@ import Button from '../components/ui/buttons/Button';
 import { TextArea } from '../components/ui/inputs/TextArea';
 import Typography from '../components/ui/typography/Typography';
 
+// ICONS
+import { X } from 'lucide-react';
+
 
 interface CancelAppointmentModalProps {
     open: boolean;
@@ -17,7 +20,8 @@ const CancelAppointmentModal = ({open, handleClose, setCancelModal}: CancelAppoi
         <form className="bg-[#1A1D21F5] flex flex-col gap-8 px-8 py-8 w-160 rounded-2xl">
             <div className="flex items-center justify-between">
             <Typography variant="h1" className="text-[24px] font-semibold text-[#FFFFFF]">Cancel Appointment</Typography>
-            <Typography variant="h1" className="cursor-pointer text-xl font-normal" onClick={() => setCancelModal(false)}>X</Typography>
+
+            <X style={{ height: '20px', width: '20px', color: '#FFFFFF', cursor: 'pointer' }} onClick={() => setCancelModal(false)}/>
             </div>
             <Typography>Are you sure you want to cancel your appointment</Typography>
 

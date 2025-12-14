@@ -3,7 +3,7 @@ import Logo from './Logo';
 import Typography from './ui/typography/Typography';
 
 //ICONS
-import user from '../assets/user.png'
+import user from '../assets/img/user.png'
 
 const Navbar = () => {
   return (

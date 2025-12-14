@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
+@import './font.css';
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'PlusJakartaSans', sans-serif;
   background-color: #131619;
   color: #ABB8C4;
   letter-spacing: 0.15px;
@@ -14,4 +15,26 @@
 
   padding: 0;
   margin: 0;
+}
+
+
+@layer components {
+  .textfield-dark {
+    @apply
+      border border-[#363A3D]
+      bg-[#1A1D21]
+      p-3
+      text-white
+      placeholder:text-[#76828D]
+      focus-within:outline-2
+      focus-within:outline-[#84DCF53D]
+      focus-within:text-[#B6F09C]
+      focus-within:border-2
+      focus-within:border-[#B6F09C];
+  }
+
+  .green-btn{
+    @apply
+    bg-[#24AE7C] text-[#FFFFFF] py-3 px-5
+  }
 }

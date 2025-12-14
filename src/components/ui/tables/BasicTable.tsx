@@ -22,6 +22,7 @@ interface ReusableTableProps {
   data: any[];
 }
 
+// Basic Reusable Table
 const BasicTable: FC<ReusableTableProps>  = ({ columns, data }) => {
 
     const [page, setPage] = useState(0);

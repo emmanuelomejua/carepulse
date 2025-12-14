@@ -1,12 +1,14 @@
+import React from 'react';
 import BasicModal from '../components/modals/BasicModal';
 import Typography from '../components/ui/typography/Typography';
 import Button from '../components/ui/buttons/Button';
+import { TextArea } from '../components/ui/inputs/TextArea';
 
 
 interface ScheduleModalProps {
     open: boolean;
     handleClose: () => void;
-    setOpenScheduleModal: any
+    setOpenScheduleModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ScheduleModal = ({open, handleClose, setOpenScheduleModal}: ScheduleModalProps) => {
@@ -20,7 +22,14 @@ const ScheduleModal = ({open, handleClose, setOpenScheduleModal}: ScheduleModalP
 
             <Typography>Please fill in the following details to schedule</Typography>
 
-            <Button className='text-[#FFFFFF] bg-[#24AE7C] py-3 px-5'>Schedule appointment</Button>
+            <TextArea
+                label='Reason for appointment '
+                placeholder='ex: Annual montly check-up'
+                className='border-[#363A3D] p-4 h-24'
+                required
+            />
+
+            <Button className='green-btn'>Schedule appointment</Button>
         </div>
 
     </BasicModal>

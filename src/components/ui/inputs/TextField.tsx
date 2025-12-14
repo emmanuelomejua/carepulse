@@ -10,6 +10,7 @@ interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement>{
     className?: string;
 }
 
+// Reusable TextField
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(({label, icon, className, wrapperClass, desc, descClass, ...props}, ref) => {
   return (
     <section className={`flex flex-col gap-1.5 ${wrapperClass}`}>

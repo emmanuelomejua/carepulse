@@ -7,7 +7,7 @@ import CancelAppointmentModal from "./CancelAppointmentModal";
 
 
 //ICONS
-import user from '../assets/user.png'
+import user from '../assets/img/user.png'
 import { Check, Hourglass, X } from "lucide-react";
 
 
@@ -93,7 +93,7 @@ const AppointmentTable = () => {
 
   return (
     <>
-        <div className="h-119.5 mb-7.5">
+        <div className="h-full">
             <BasicTable columns={columns} data={patientData ?? []}/>
         </div>
 

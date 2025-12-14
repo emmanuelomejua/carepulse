@@ -3,8 +3,8 @@ import Logo from '../components/Logo';
 import AuthForm from '../sections/AuthForm';
 import Typography from '../components/ui/typography/Typography';
 
-// SVGs
-import coverImg from '../assets/Illustration.png'
+// ICONS
+import coverImg from '../assets/img/Illustration.png'
 
 const Auth = () => {
   return (

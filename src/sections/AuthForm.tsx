@@ -25,28 +25,28 @@ const AuthForm = () => {
       label='Full name' 
       placeholder='John Doe' 
       required
-      className='border border-[#363A3D] text-[#FFFFFF] p-3 bg-[#1A1D21] focus-within:outline-2 focus-within:outline-[#84DCF53D]
-      focus-within:text-[#B6F09C] placeholder:text-[#76828D] focus-within:border-2 focus-within:border-[#B6F09C]' />
+      className='textfield-dark'
+      />
 
      <TextField 
       icon={<img src='/icons/email.svg' alt='' className='w-4.5 h-4.5'/>}
       label='Email address' 
       placeholder='johndoe@gmail.com' 
       required
-      className='border border-[#363A3D] text-[#FFFFFF] p-3 bg-[#1A1D21] focus-within:outline-2 focus-within:outline-[#84DCF53D]
-      focus-within:text-[#B6F09C] placeholder:text-[#76828D] focus-within:border-2 focus-within:border-[#B6F09C]'/>
+      className='textfield-dark'
+      />
 
      <TextField 
       icon={<img src='/icons/phone.svg' alt='' className='w-4.5 h-4.5'/>}
       label='Phone number' 
       placeholder='+234 901 334 7728' type='number' 
       required
-      className='border border-[#363A3D] text-[#FFFFFF] p-3 bg-[#1A1D21] focus-within:outline-2 focus-within:outline-[#84DCF53D]
-      focus-within:text-[#B6F09C] placeholder:text-[#76828D] focus-within:border-2 focus-within:border-[#B6F09C]'/>
+      className='textfield-dark'
+      />
 
      <Button 
       type='submit'
-      className='bg-[#24AE7C] text-[#FFFFFF] py-3 px-5'>Get Started</Button>
+      className='green-btn'>Get Started</Button>
     </form>
 
     <OtpModal open={open} setOpen={setOpen} handleClose={() => setOpen(false)}/>

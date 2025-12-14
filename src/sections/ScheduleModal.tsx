@@ -20,7 +20,7 @@ const ScheduleModal = ({open, handleClose, setOpenScheduleModal}: ScheduleModalP
 
             <Typography>Please fill in the following details to schedule</Typography>
 
-            <Button className='text-[#FFFFFF] bg-[#24AE7C] py-3 px-5'>Schedule appointment</Button>
+            <Button className='green-btn'>Schedule appointment</Button>
         </div>
 
     </BasicModal>

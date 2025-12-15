@@ -62,7 +62,7 @@ const CustomSelect: FC<SelectProps> = ({
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute z-50 mt-2 w-full rounded-xl border border-[#FFFFFF14] bg-[#1A1D21F5] p-2 space-y-1">
+        <div className="absolute z-50 mt-2 w-full rounded-xl border border-[#FFFFFF14] bg-[#0F1113] p-2 space-y-1">
           {options.map((option) => (
             <div
               key={option.value}
